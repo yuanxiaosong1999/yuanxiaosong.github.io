@@ -3,47 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yuan Xiaosong - Personal Homepage</title>
+  <meta name="description" content="Academic homepage of Xiaosong Yuan, a graduate student at Shanghai Jiao Tong University.">
+  <title>Xiaosong Yuan | Shanghai Jiao Tong University</title>
   <style>
-    body {
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 0 24px;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      color: #222;
+    :root {
+      --text: #172033;
+      --muted: #5b6475;
+      --accent: #9e1b32;
+      --line: #e5e8ef;
+      --soft: #f7f8fb;
     }
-    h1 { margin-bottom: 5px; }
-    h2 { margin-top: 36px; }
-    a { color: #0969da; }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    main {
+      width: min(940px, calc(100% - 40px));
+      margin: 56px auto 80px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 38px;
+      align-items: center;
+      padding-bottom: 38px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .portrait {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(23, 32, 51, 0.09);
+    }
+
+    h1 {
+      margin: 0 0 5px;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .identity { margin: 14px 0; }
+    .contact { margin: 0; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    section { margin-top: 38px; }
+
+    h2 {
+      margin: 0 0 14px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.35rem;
+    }
+
+    p { margin: 0 0 14px; }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 24px;
+    }
+
+    .paper {
+      padding: 20px 22px;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      background: var(--soft);
+    }
+
+    .paper-title {
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .paper-status {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .education-item p { margin: 0; }
+    .date { color: var(--muted); white-space: nowrap; }
+
+    footer {
+      margin-top: 54px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      main { margin-top: 32px; }
+
+      header {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .portrait {
+        width: 145px;
+        height: 180px;
+      }
+
+      .education-item { grid-template-columns: 1fr; gap: 2px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Yuan Xiaosong</h1>
+  <main>
+    <header>
+      <!-- Upload your photo to the repository as profile.jpg. -->
+      <img class="portrait" src="profile.jpg" alt="Portrait of Xiaosong Yuan">
 
-  <p>
-    Student at XXX University<br>
-    School of XXX<br>
-    Email:
-    <a href="mailto:yuanxiaosong@sjtu.edu.cn">yuanxiaosong@sjtu.edu.cn</a>
-  </p>
+      <div>
+        <!-- Confirm whether your preferred English name order is Xiaosong Yuan or Yuan Xiaosong. -->
+        <h1>Xiaosong Yuan</h1>
+        <p class="identity">
+          First-year M.S. Student in Computer Science and Technology<br>
+          School of Computer Science, Shanghai Jiao Tong University
+        </p>
+        <p class="contact">
+          Email: <a href="mailto:YOUR_EMAIL@sjtu.edu.cn">YOUR_EMAIL@sjtu.edu.cn</a>
+          <!-- Optional: · <a href="YOUR_GITHUB_URL">GitHub</a> -->
+        </p>
+      </div>
+    </header>
 
-  <h2>About Me</h2>
-  <p>
-    I am a student at XXX University. My research interests
-    include artificial intelligence, machine learning, and XXX.
-  </p>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a first-year master's student in Computer Science and Technology at the
+        School of Computer Science, Shanghai Jiao Tong University. I plan to transition
+        to the Ph.D. program. Before joining SJTU, I received my bachelor's degree in
+        Intelligent Science and Technology from Shanghai University.
+      </p>
+    </section>
 
-  <h2>Education</h2>
-  <p>
-    XXX University, Bachelor's/Master's/PhD Student, 202X–Present
-  </p>
+    <section>
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Large Language Model Reasoning</li>
+        <li>Large Language Model Compression</li>
+        <li>Speculative Decoding</li>
+        <li>Overthinking in Large Language Models</li>
+      </ul>
+    </section>
 
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Artificial Intelligence</li>
-    <li>Machine Learning</li>
-    <li>Your research area</li>
-  </ul>
+    <section>
+      <h2>Publications &amp; Manuscripts</h2>
+      <article class="paper">
+        <p class="paper-title">
+          REASONPRUNE: Reasoning-Aware Structured Pruning via Cost-Aware Ranking and Block Sensitivity
+        </p>
+        <p class="paper-status">
+          Manuscript submitted to IEEE Transactions on Cognitive Communications and Networking (TCCN); minor revision submitted.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education-item">
+        <p>
+          <strong>Shanghai Jiao Tong University</strong><br>
+          M.S. Student, Computer Science and Technology
+        </p>
+        <p class="date">Present</p>
+      </div>
+
+      <div class="education-item">
+        <p>
+          <strong>Shanghai University</strong><br>
+          B.Eng./B.S. in Intelligent Science and Technology
+        </p>
+        <p class="date">Completed</p>
+      </div>
+    </section>
+
+    <footer>
+      Last updated: July 2026
+    </footer>
+  </main>
 </body>
 </html>
